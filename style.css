@@ -487,20 +487,6 @@ header {
   .section__title--about {
     grid-area: title;
   }
-
-  .arrowimg {
-    position: relative;
-    left: 255px;
-    top: 265px;
-  }
-
-  @media screen and (max-width: 380px) {
-    .arrowimg {
-      position: relative;
-      left: 125px;
-      top: 155px;
-    }
-  }
   .section__subtitle--about {
     grid-column: 1 / -1;
     border-radius: 20px;
