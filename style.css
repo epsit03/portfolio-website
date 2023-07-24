@@ -152,6 +152,8 @@ header {
 
 .logo {
   max-width: 100px;
+  filter: hue-rotate(140deg);
+  /* -webkit-filter: hue-rotate(180deg); */
 }
 
 .nav {
@@ -380,19 +382,17 @@ header {
 
 #skills {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  justify-content: space-around;
   margin: 0 auto;
   align-items: center;
   max-width: 70rem;
   text-align: center;
-  margin-top: 0.2rem;
+  margin-top: 0px;
 }
 
 .skills-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .skill-header {
@@ -406,6 +406,63 @@ header {
 .icon {
   width: 9rem;
   height: 9rem;
+}
+
+@media screen and (max-width: 720px) {
+  .icon {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.animate-character {
+  text-align: center;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #332233 0%,
+    #ca27eb 29%,
+    #251727 67%,
+    #ec4ef1 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  font-size: 30px;
+}
+
+#whoIam {
+  font: 24px var(--ff-secondary);
+  font: outline;
+}
+
+@media screen and (max-width: 1360px) {
+  #whoIam {
+    font: 18px var(--ff-secondary);
+  }
+}
+.cntnr {
+  display: flex;
+  justify-content: center;
+  width: 91%;
+  height: auto;
+  padding: 20px;
+  box-shadow: -2px 2px rgb(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.809);
+  border-radius: 20px;
+  margin: auto;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .icon-card {
@@ -431,6 +488,19 @@ header {
     grid-area: title;
   }
 
+  .arrowimg {
+    position: relative;
+    left: 255px;
+    top: 265px;
+  }
+
+  @media screen and (max-width: 380px) {
+    .arrowimg {
+      position: relative;
+      left: 125px;
+      top: 155px;
+    }
+  }
   .section__subtitle--about {
     grid-column: 1 / -1;
     border-radius: 20px;
@@ -464,6 +534,7 @@ header {
 }
 
 .portfolio__item {
+  display: flex;
   background: var(--clr-accent);
   overflow: hidden;
 }
@@ -480,7 +551,7 @@ header {
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
   transform: scale(1.2);
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 /* footer */
